@@ -33,3 +33,4 @@ output endpoint string = swa.outputs.defaultHostname
 
 @description('Output the static web app name')
 output staticWebAppName string = swa.outputs.name
+
