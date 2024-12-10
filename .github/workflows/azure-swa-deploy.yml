@@ -49,6 +49,9 @@ jobs:
       env:
           AZD_INITIAL_ENVIRONMENT_CONFIG: ${{ secrets.AZD_INITIAL_ENVIRONMENT_CONFIG }}
 
-    - name: Deploy Application
-      run: azd deploy --no-prompt
+    - name: 'SWA: cli install'
+      run: npm install -g @azure/static-web-apps-cli
+
+    - name: 'SWA: Build application'
+      run: start build --api-location api
     
