@@ -40,7 +40,9 @@ jobs:
 
     - name: Provision Infrastructure
       id: deploy_bicep
-      run: azd provision --no-state --no-prompt
+      run: |
+        azd provision --no-state --no-prompt
+        echo "::set-output name=staticWebAppName::$(jq -r '.properties.outputs.staticWebAppName.value' output.json)
       env:
         AZURE_ENV_NAME: ${{ vars.AZURE_ENV_NAME }}
         AZURE_LOCATION: ${{ vars.AZURE_LOCATION }}
