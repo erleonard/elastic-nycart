@@ -51,6 +51,12 @@ jobs:
         AZURE_LOCATION: ${{ vars.AZURE_LOCATION }}
         AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
+    - name: 'NPM: Build'
+      run: |
+        rm -rf node_modules
+        rm -rf package-lock.json
+        npm install react-scripts
+        
     - name: Deploy Application
       run: azd deploy --no-prompt
       env:
