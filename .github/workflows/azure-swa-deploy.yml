@@ -60,6 +60,6 @@ jobs:
         npm install --no-fund
         npm run build
       
-    - name: 'SWA: Build application'
-      run: start build --api-location api
+    - name: Deploy Application
+      run: azd deploy --no-prompt --debug
     
