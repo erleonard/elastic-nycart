@@ -61,5 +61,5 @@ jobs:
         npm run build
       
     - name: Deploy Application
-      run: azd deploy --no-prompt --debug
+      run: swa deploy --resource-group rg-demo --app-name swa-yoyfbhsvbtasm --env Production
     
