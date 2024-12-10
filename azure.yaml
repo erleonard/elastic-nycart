@@ -3,3 +3,13 @@
 name: art-gallery-chat-app
 metadata:
   template: art-gallery-chat-app@0.0.1-beta
+services:
+  web:
+    project: ./src
+    dist: build
+    language: js
+    host: staticwebapp
+  api:
+    project: ./api
+    language: js
+    host: staticwebapp
