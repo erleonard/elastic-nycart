@@ -36,14 +36,8 @@ jobs:
       uses: Azure/setup-azd@v1.0.0
       
     - name: 'AZD: Auth'
-      if: ${{ env.AZURE_CLIENT_ID != '' }}
-      run: |
-        azd auth login `
-          --client-id "$Env:AZURE_CLIENT_ID" `
-          --federated-credential-provider "github" `
-          --tenant-id "$Env:AZURE_TENANT_ID"
-      shell: pwsh
-          
+      run: azd config set auth.useAzCliAuth "true"
+
     - name: Provision Infrastructure
       run: azd provision --no-state --no-prompt
       env:
