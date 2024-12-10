@@ -54,7 +54,9 @@ jobs:
 
     - name: 'NPM: Build'
       run: |
-        rm package-lock.json
+        rm -rf node_modules
+        rm -rf package-lock.json
+        npm install react-scripts
         npm install --no-fund
         npm run build
       
