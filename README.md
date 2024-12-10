@@ -1,4 +1,4 @@
-# NYC Art Gallery Chatbot
+# NYC Art Gallery Chatbot - updated 2024-12-20
 
 See the live demo at [https://art.richtercloud.com](https://art.richtercloud.com/)
 
