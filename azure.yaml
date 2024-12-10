@@ -8,4 +8,5 @@ services:
     project: .
     dist: build
     language: js
+    resourceName: swa-yoyfbhsvbtasm
     host: staticwebapp
