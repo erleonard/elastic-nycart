@@ -47,7 +47,7 @@ jobs:
         AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
         
     - name: "echo"
-      run: echo "Storage Account Name: ${{ steps.deploy_bicep.outputs.staticWebAppName }}"
+      run: echo ${{ steps.deploy_bicep.outputs.staticWebAppName }}
       
     - name: 'NPM: Build'
       run: |
