@@ -54,6 +54,7 @@ jobs:
 
     - name: 'NPM: Build'
       run: |
+        rm package-lock.json
         npm install --no-fund
         npm run build
       
