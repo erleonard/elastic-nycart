@@ -5,6 +5,7 @@ metadata:
   template: art-gallery-chat-app@0.0.1-beta
 services:
   web:
-    project: ./
+    project: .
+    dist: build
     language: js
     host: staticwebapp
