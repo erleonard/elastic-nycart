@@ -52,6 +52,9 @@ jobs:
     - name: 'SWA: cli install'
       run: npm install -g @azure/static-web-apps-cli
 
+    - name: 'NPM: Build'
+      run: npm run build
+      
     - name: 'SWA: Build application'
       run: start build --api-location api
     
