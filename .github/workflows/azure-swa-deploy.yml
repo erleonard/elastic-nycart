@@ -17,14 +17,14 @@ jobs:
       AZURE_ENV_NAME: ${{ vars.AZURE_ENV_NAME }}
       AZURE_LOCATION: ${{ vars.AZURE_LOCATION }}
       ARTGALLERYCSV: https://data.cityofnewyork.us/api/views/43hw-uvdj/rows.csv?date=20241016&accessType=DOWNLOAD
-      ELASTIC_SEARCH_INDEX: nyc-art-galleries
-      ELASTIC_VECTOR_FIELD: embedding
-      ELASTIC_EMBEDDING_MODEL_ID: azure_openai_embeddings
-      ELASTIC_COMPLETION_MODEL_ID: azure_openai_completions
-      ELASTIC_INFERENCE_PIPELINE_MODEL_ID: inferences_pipeline
-      AZURE_EMBEDDING_API_VERSION: 2023-05-15
-      AZURE_COMPLETION_API_VERSION: 2024-08-01-preview
-      
+      ELASTIC_SEARCH_INDEX: "nyc-art-galleries"
+      ELASTIC_VECTOR_FIELD: "embedding"
+      ELASTIC_EMBEDDING_MODEL_ID: "azure_openai_embeddings"
+      ELASTIC_COMPLETION_MODEL_ID: "azure_openai_completions"
+      ELASTIC_INFERENCE_PIPELINE_MODEL_ID: "inferences_pipeline"
+      AZURE_EMBEDDING_API_VERSION: "2023-05-15"
+      AZURE_COMPLETION_API_VERSION: "2024-08-01-preview"
+
     steps:
     - name: Checkout
       uses: actions/checkout@v4.2.2
