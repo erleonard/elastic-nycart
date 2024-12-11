@@ -30,9 +30,9 @@ module swa 'br/public:avm/res/web/static-site:0.6.1' = {
   params: {
     name: 'swa-${random}'
     location: location
+    tags: tags
     sku: 'Standard'
   }
-  tags: tags
 }
 
 @description('Output the default hostname')
