@@ -57,7 +57,7 @@
         "value": "${AZURE_COMPLETION_DEPLOYMENT_ID}"
       },
       "ASSISTANT_ID": {
-        "value": "${ASSISTANT}"
+        "value": "${ASSISTANT_ID}"
       }
     }
 }
