@@ -32,6 +32,11 @@ module swa 'br/public:avm/res/web/static-site:0.6.1' = {
     location: location
     tags: union(tags, { 'azd-service-name': 'web' })
     sku: 'Standard'
+    appSettings: {
+      APP_LOCATION: location
+      API_LOCATION: location
+      APP_ARTIFACT_LOCATION: location
+    }
   }
 }
 
