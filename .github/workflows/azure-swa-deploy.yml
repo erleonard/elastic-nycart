@@ -16,7 +16,7 @@ jobs:
       AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
       AZURE_ENV_NAME: ${{ vars.AZURE_ENV_NAME }}
       AZURE_LOCATION: ${{ vars.AZURE_LOCATION }}
-      ARTGALLERYCSV: https://data.cityofnewyork.us/api/views/43hw-uvdj/rows.csv?date=20241016&accessType=DOWNLOAD
+      ARTGALLERYCSV: "https://data.cityofnewyork.us/api/views/43hw-uvdj/rows.csv?date=20241016&accessType=DOWNLOAD"
       ELASTIC_SEARCH_INDEX: "nyc-art-galleries"
       ELASTIC_VECTOR_FIELD: "embedding"
       ELASTIC_EMBEDDING_MODEL_ID: "azure_openai_embeddings"
