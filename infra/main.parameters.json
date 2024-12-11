@@ -28,6 +28,36 @@
       },
       "AZURE_COMPLETION_API_VERSION": {
         "value": "${AZURE_COMPLETION_API_VERSION}"
+      },
+      "ELASTIC_CLUSTER_ID": {
+        "value": "${ELASTIC_CLUSTER_ID}"
+      },
+      "ELASTIC_API_KEY": {
+        "value": "${ELASTIC_API_KEY}"
+      },
+      "ENDPOINT_BASE": {
+        "value": "${ENDPOINT_BASE}"
+      },
+      "ENDPOINT": {
+        "value": "${ENDPOINT}"
+      },
+      "AZURE_API_KEY": {
+        "value": "${AZURE_API_KEY}"
+      },
+      "AZURE_EMBEDDING_RESOURCE_NAME": {
+        "value": "${AZURE_EMBEDDING_RESOURCE_NAME}"
+      },
+      "AZURE_EMBEDDING_DEPLOYMENT_ID": {
+        "value": "${AZURE_EMBEDDING_DEPLOYMENT_ID}"
+      },
+      "AZURE_COMPLETION_RESOURCE_NAME": {
+        "value": "${AZURE_COMPLETION_RESOURCE_NAME}"
+      },
+      "AZURE_COMPLETION_DEPLOYMENT_ID": {
+        "value": "${AZURE_COMPLETION_DEPLOYMENT_ID}"
+      },
+      "ASSISTANT_ID": {
+        "value": "${ASSISTANT}"
       }
     }
 }
