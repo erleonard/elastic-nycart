@@ -8,7 +8,6 @@ services:
     project: .
     dist: build
     language: js
-    resourceName: ${STATIC_WEB_APP_NAME}
     host: staticwebapp
 pipeline:
   variables:
