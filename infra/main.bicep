@@ -30,7 +30,7 @@ module swa 'br/public:avm/res/web/static-site:0.6.1' = {
   params: {
     name: 'swa-${random}'
     location: location
-    tags: tags
+    tags: union(tags, { 'azd-service-name': 'web' })
     sku: 'Standard'
   }
 }
