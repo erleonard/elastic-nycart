@@ -7,6 +7,21 @@
       },
       "location": {
         "value": "${AZURE_LOCATION}"
-      }
+      },
+      "ELASTIC_SEARCH_INDEX": {
+        "value": "${ELASTIC_SEARCH_INDEX}"},
+
+      "ELASTIC_VECTOR_FIELD": {
+        "value": "${ELASTIC_VECTOR_FIELD}"},
+      "ELASTIC_EMBEDDING_MODEL_ID": {
+        "value": "${ELASTIC_EMBEDDING_MODEL_ID}"},
+      "ELASTIC_COMPLETION_MODEL_ID": {
+        "value": "${ELASTIC_COMPLETION_MODEL_ID}"},
+      "ELASTIC_INFERENCE_PIPELINE_MODEL_ID": {
+        "value": "${ELASTIC_INFERENCE_PIPELINE_MODEL_ID}"},
+      "AZURE_EMBEDDING_API_VERSION": {
+        "value": "${AZURE_EMBEDDING_API_VERSION}"},
+      "AZURE_COMPLETION_API_VERSION": {
+        "value": "${AZURE_COMPLETION_API_VERSION}"}
     }
 }

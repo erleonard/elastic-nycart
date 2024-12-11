@@ -16,6 +16,14 @@ jobs:
       AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
       AZURE_ENV_NAME: ${{ vars.AZURE_ENV_NAME }}
       AZURE_LOCATION: ${{ vars.AZURE_LOCATION }}
+      ARTGALLERYCSV: https://data.cityofnewyork.us/api/views/43hw-uvdj/rows.csv?date=20241016&accessType=DOWNLOAD
+      ELASTIC_SEARCH_INDEX: nyc-art-galleries
+      ELASTIC_VECTOR_FIELD: embedding
+      ELASTIC_EMBEDDING_MODEL_ID: azure_openai_embeddings
+      ELASTIC_COMPLETION_MODEL_ID: azure_openai_completions
+      ELASTIC_INFERENCE_PIPELINE_MODEL_ID: inferences_pipeline
+      AZURE_EMBEDDING_API_VERSION: 2023-05-15
+      AZURE_COMPLETION_API_VERSION: 2024-08-01-preview
     steps:
     - name: Checkout
       uses: actions/checkout@v4.2.2
@@ -46,6 +54,13 @@ jobs:
         AZURE_ENV_NAME: ${{ vars.AZURE_ENV_NAME }}
         AZURE_LOCATION: ${{ vars.AZURE_LOCATION }}
         AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+        ELASTIC_SEARCH_INDEX: ${{ vars.ELASTIC_SEARCH_INDEX }}
+        ELASTIC_VECTOR_FIELD: ${{ vars.ELASTIC_VECTOR_FIELD }}
+        ELASTIC_EMBEDDING_MODEL_ID: ${{ vars.ELASTIC_EMBEDDING_MODEL_ID }}
+        ELASTIC_COMPLETION_MODEL_ID: ${{ vars.ELASTIC_COMPLETION_MODEL_ID }}
+        ELASTIC_INFERENCE_PIPELINE_MODEL_ID: ${{ vars.ELASTIC_INFERENCE_PIPELINE_MODEL_ID }}
+        AZURE_EMBEDDING_API_VERSION: ${{ vars.AZURE_EMBEDDING_API_VERSION }}
+        AZURE_COMPLETION_API_VERSION: ${{ vars.AZURE_COMPLETION_API_VERSION }}
 
     - name: 'NPM: Build'
       run: |
