@@ -12,9 +12,15 @@ param location string
 @description('String to make resource names unique')
 var random = uniqueString(subscription().subscriptionId, location)
 
+// tags that should be applied to all resources.
+var tags = {
+  'azd-env-name': environmentName
+}
+
 resource rg 'Microsoft.Resources/resourceGroups@2022-09-01' = {
   name: 'rg-${environmentName}'
   location: location
+  tags: tags
 }
 
 @description('Create a static web app')
@@ -26,6 +32,7 @@ module swa 'br/public:avm/res/web/static-site:0.6.1' = {
     location: location
     sku: 'Standard'
   }
+  tags: tags
 }
 
 @description('Output the default hostname')
@@ -33,4 +40,3 @@ output endpoint string = swa.outputs.defaultHostname
 
 @description('Output the static web app name')
 output staticWebAppName string = swa.outputs.name
-
