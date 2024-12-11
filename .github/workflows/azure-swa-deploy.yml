@@ -51,6 +51,7 @@ jobs:
       run: |
         rm -rf node_modules
         rm -rf package-lock.json
+        npm install react-scripts
         
     - name: Deploy Application
       run: azd deploy --no-prompt
