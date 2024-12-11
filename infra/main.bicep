@@ -9,6 +9,14 @@ param environmentName string
 @description('Primary location for all resources')
 param location string
 
+param ELASTIC_SEARCH_INDEX string
+param ELASTIC_VECTOR_FIELD string
+param ELASTIC_EMBEDDING_MODEL_ID string
+param ELASTIC_COMPLETION_MODEL_ID string
+param ELASTIC_INFERENCE_PIPELINE_MODEL_ID string
+param AZURE_EMBEDDING_API_VERSION string
+param AZURE_COMPLETION_API_VERSION string
+
 @description('String to make resource names unique')
 var random = uniqueString(subscription().subscriptionId, location)
 
@@ -34,8 +42,13 @@ module swa 'br/public:avm/res/web/static-site:0.6.1' = {
     sku: 'Standard'
     appSettings: {
       APP_LOCATION: location
-      API_LOCATION: location
-      APP_ARTIFACT_LOCATION: location
+      ELASTIC_SEARCH_INDEX: ELASTIC_SEARCH_INDEX
+      ELASTIC_VECTOR_FIELD: ELASTIC_VECTOR_FIELD
+      ELASTIC_EMBEDDING_MODEL_ID: ELASTIC_EMBEDDING_MODEL_ID
+      ELASTIC_COMPLETION_MODEL_ID: ELASTIC_COMPLETION_MODEL_ID
+      ELASTIC_INFERENCE_PIPELINE_MODEL_ID: ELASTIC_INFERENCE_PIPELINE_MODEL_ID
+      AZURE_EMBEDDING_API_VERSION: AZURE_EMBEDDING_API_VERSION
+      AZURE_COMPLETION_API_VERSION: AZURE_COMPLETION_API_VERSION
     }
   }
 }
