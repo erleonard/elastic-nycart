@@ -10,3 +10,6 @@ services:
     language: js
     resourceName: ${STATIC_WEB_APP_NAME}
     host: staticwebapp
+pipeline:
+  variables:
+    - staticWebAppName
