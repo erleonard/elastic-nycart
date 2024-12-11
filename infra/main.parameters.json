@@ -29,8 +29,8 @@
       "AZURE_COMPLETION_API_VERSION": {
         "value": "${AZURE_COMPLETION_API_VERSION}"
       },
-      "ELASTIC_CLUSTER_ID": {
-        "value": "${ELASTIC_CLUSTER_ID}"
+      "ELASTIC_CLUSTER": {
+        "value": "${ELASTIC_CLUSTER}"
       },
       "ELASTIC_API_KEY": {
         "value": "${ELASTIC_API_KEY}"
