@@ -1,0 +1,7 @@
+# .dockerignore
+node_modules
+dist
+.git
+.env
+# Add any other files or directories you want to exclude
+/api
