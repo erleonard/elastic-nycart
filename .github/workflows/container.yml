@@ -43,6 +43,6 @@ jobs:
           file: ./assets/Dockerfile
           push: true
           tags: |
-            ghcr.io/${{github.repository_owner}}/${{github.repository.name}}:latest
+            ghcr.io/${{github.repository_owner}}/elastic-nycart:latest
             ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
