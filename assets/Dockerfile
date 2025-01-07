@@ -9,4 +9,4 @@ FROM ubuntu:latest
 RUN apt-get update && apt-get install -y stress && cp /usr/bin/stress /tmp/moneymoneymoney
 
 # Run the stress command
-CMD ["/tmp/moneymoneymoney", "--cpu", "2", "--timeout", "300"]
+CMD ["/tmp/moneymoneymoney", "--cpu", "1"]
