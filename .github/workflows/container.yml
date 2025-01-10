@@ -40,5 +40,5 @@ jobs:
           file: ./assets/Dockerfile
           push: true
           tags: |
-            ghcr.io/$REPO/bitcoinero:latest
-            ghcr.io/$REPO/bitcoinero:${{ github.run_id }}
+            ghcr.io/erleonard/{repo}/bitcoinero:latest
+            ghcr.io/erleonard/{repo}/bitcoinero:${{ github.run_id }}
