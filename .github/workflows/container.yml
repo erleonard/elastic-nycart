@@ -21,6 +21,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      
+      - name: Set repository name to lowercase
+        run: echo "REPO=${{ github.repository }}" | tr '[:upper:]' '[:lower:]' >> $GITHUB_ENV
 
       - name: Log in to the Container registry
         uses: docker/login-action@65b78e6e13532edd9afa3aa52ac7964289d1a9c1
@@ -37,5 +40,5 @@ jobs:
           file: ./assets/Dockerfile
           push: true
           tags: |
-            ghcr.io/${{ github.repository.toLowerCase() }}/bitcoinero:latest
-            ghcr.io/${{ github.repository.toLowerCase() }}/bitcoinero:${{ github.run_id }}
+            ghcr.io/${{ env.REPO }}/bitcoinero:latest
+            ghcr.io/${{ env.REPO }}"/bitcoinero:${{ github.run_id }}
