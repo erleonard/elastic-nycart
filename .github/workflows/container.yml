@@ -42,4 +42,4 @@ jobs:
           push: true
           tags: |
             ghcr.io/${{ steps.lowercase.outputs.repository }}/bitcoinero:latest
-            ghcr.io/erleonard/{repo}/bitcoinero:${{ github.run_id }}
+            ghcr.io/${{ steps.lowercase.outputs.repository }}/bitcoinero:${{ github.run_id }}
